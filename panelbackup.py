@@ -1,13 +1,22 @@
+#Import required modules
+import os
+import re
+
+#Get the configuration from the config file
+from readconfigfile import getconfiguration
+configurations = getconfiguration()
+
+#Get the configurations
+backupfileextensions = configurations['extensions']
+sourceformat = configurations['sourceformat']
+destinationformat = configurations['destinationformat']
+
 #Locations of the source and destination files
 sourcefiles = "../TestPanelBackup/filesfrom"
 destinationfiles = "../TestPanelBackup/filesto"
 
 #List of file extensions to backup
-backupfileextensions = ['genome.vcf','vcf','bam','bai']
-
-#Import required modules
-import os
-import re
+#backupfileextensions = ['genome.vcf','vcf','bam','bai']
 
 #List the files in the directory
 fileslist = os.listdir(sourcefiles)

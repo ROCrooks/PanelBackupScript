@@ -9,5 +9,9 @@ def getconfiguration():
     sourceformat = config['folderpathformats']['sourceformat']
     destinationformat = config['folderpathformats']['destinationformat']
 
-    configuration = {"Source": sourceformat, "destination": destinationformat}
+    #Get file extensions list
+    extensions = config['fileextensions']['extensions']
+    extensions = extensions.split(", ")
+
+    configuration = {"sourceformat": sourceformat, "destinationformat": destinationformat, "extensions": extensions}
     return configuration
