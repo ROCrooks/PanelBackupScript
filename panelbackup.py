@@ -11,15 +11,17 @@ backupfileextensions = configurations['extensions']
 sourceformat = configurations['sourceformat']
 destinationformat = configurations['destinationformat']
 
-#Locations of the source and destination files
-sourcefiles = "../TestPanelBackup/filesfrom"
-destinationfiles = "../TestPanelBackup/filesto"
-
-#List of file extensions to backup
-#backupfileextensions = ['genome.vcf','vcf','bam','bai']
+#Make source and destination folders
+from selectfolder import choosefolder, makedestination
+sourcefiles = choosefolder()
+destinationfiles = makedestination(sourcefiles,sourceformat,destinationformat)
 
 #List the files in the directory
 fileslist = os.listdir(sourcefiles)
+
+#Create folder if not already existing
+if not os.path.exists(destinationfiles):
+    os.mkdir(destinationfiles)
 
 for file in fileslist:
 

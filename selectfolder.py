@@ -3,10 +3,10 @@ import tkinter as tk
 from tkinter import filedialog
 
 #sourceformat = "D:\Illumina\MiSeqAnalysis\<runID>\data\intensities\BaseCalls\Alignment"
-sourceformat = "D:/Illumina/MiSeqAnalysis/<runID>/data/intensities/BaseCalls/Alignment"
+#sourceformat = "D:/Illumina/MiSeqAnalysis/<runID>/data/intensities/BaseCalls/Alignment"
 #sourceformat = sourceformat.replace("\","\\")
 #destinationformat = "Z:\Illumina\MiSeqOutput\<runID>"
-destinationformat = "Z:/Illumina/MiSeqOutput/<runID>"
+#destinationformat = "Z:/Illumina/MiSeqOutput/<runID>"
 
 def choosefolder():
     #Choose folder
